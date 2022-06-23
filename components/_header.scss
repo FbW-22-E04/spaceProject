@@ -1,7 +1,5 @@
-@import '/components/base';
+@use "./base";
 
-header{
-    background-color: aqua;
-    height: 100px;
-    width: 100%;
+header {
+  background-color: $lilac;
 }
