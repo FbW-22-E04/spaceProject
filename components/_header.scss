@@ -36,23 +36,43 @@
     font-size: base.$subheading-1;
     color: base.$lilac;
   }
+  /* Old version .menu*/
+  // .menu {
+  //   display: none;
+  //   position: absolute;
+  //   top: 100%;
+  //   right: -75px+22.5px;
+  //   min-width: 150px;
+  //   list-style: none;
+  //   font-size: base.$base-font-size;
+  //   background-color: base.$black;
+  //   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  // }
   .menu {
     display: none;
     position: absolute;
+    right: -5rem;
     top: 100%;
-    right: -75px+22.5px;
-    min-width: 150px;
+    width: 70vw;
+    height: 100vh;
     list-style: none;
-    font-size: base.$base-font-size;
-    background-color: base.$black;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    font-size: base.$nav-lg;
+    color: base.$white;
+    text-transform: uppercase;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.13);
+    border-radius: 2px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15.4px);
+    -webkit-backdrop-filter: blur(15.4px);
+    /***/
   }
+
   .menu-btn:hover .menu {
     display: block;
   }
   .menu-item {
-    padding: 1rem;
-    border-top: 1px solid base.$white-light;
+    padding: 3rem 1rem;
   }
   .menu-item:hover {
     text-decoration: none;
@@ -65,6 +85,10 @@
   }
   .navigation-lg {
     display: none;
+  }
+  .bold-text {
+    font-weight: bold;
+    padding: 1rem;
   }
 }
 
@@ -100,10 +124,6 @@
     }
     .menu-item-lg:hover {
       border-bottom: 1px solid base.$white;
-    }
-    .bold-text {
-      font-weight: bold;
-      padding: 1rem;
     }
   }
 }
