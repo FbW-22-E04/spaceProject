@@ -1,5 +1,138 @@
 @use "./base";
 
-header {
-  background-color: base.$lilac;
+// Styles for the small devices
+.header {
+  background-color: transparent;
+  color: base.$white;
+  display: flex;
+  height: 10rem;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
+  .logo {
+    width: 5rem;
+    height: 5rem;
+    margin: 2rem;
+  }
+  .navigation-sm {
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+    margin-right: 5rem;
+  }
+  .menu-btn {
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+    padding: 1rem;
+  }
+  .menu-btn:hover {
+    color: base.$white-medium;
+  }
+  .fa-solid {
+    font-size: base.$subheading-1;
+    color: base.$lilac;
+  }
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: -75px+22.5px;
+    min-width: 150px;
+    list-style: none;
+    font-size: base.$base-font-size;
+    background-color: base.$black;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+  .menu-btn:hover .menu {
+    display: block;
+  }
+  .menu-item {
+    padding: 1rem;
+    border-top: 1px solid base.$white-light;
+  }
+  .menu-item:hover {
+    text-decoration: none;
+    background-color: base.$white-light;
+  }
+  .menu-item a {
+    text-decoration: none;
+    color: base.$white;
+    padding: 1rem;
+  }
+  .navigation-lg {
+    display: none;
+  }
+}
+
+//Styles for the medium devices
+@media only screen and (min-width: 768px) {
+  .header {
+    justify-content: space-between;
+    .navigation-sm {
+      display: none;
+    }
+    .navigation-lg {
+      background-color: base.$white-light;
+      display: flex;
+      justify-content: space-around;
+      width: 70vw;
+    }
+    .menu-lg {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 1px;
+    }
+    .menu-item-lg {
+      list-style: none;
+      padding: 4rem 1rem;
+    }
+    .menu-item-lg a {
+      list-style: none;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: base.$white;
+      padding: 4rem 1rem;
+    }
+    .menu-item-lg:hover {
+      border-bottom: 1px solid base.$white;
+    }
+    .bold-text {
+      font-weight: bold;
+      padding: 1rem;
+    }
+  }
+}
+//Styles for the large devices
+
+@media only screen and (min-width: 992px) {
+  .header {
+    margin-top: 5rem;
+    .navigation-lg {
+      width: 60vw;
+      position: relative;
+    }
+    .navigation-lg::before {
+      content: "";
+      position: absolute;
+      left: -29vw;
+      top: 50%;
+      display: inline-block;
+      width: 33vw;
+      height: 2px;
+      background-color: base.$white-light;
+    }
+
+    .menu-item-lg {
+      padding: 4rem 2rem;
+    }
+    .menu-item-lg a {
+      padding: 4rem 2rem;
+      font-size: base.$nav-lg;
+    }
+  }
 }
