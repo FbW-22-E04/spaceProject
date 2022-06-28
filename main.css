@@ -118,6 +118,10 @@ body {
   .header .menu-item-lg {
     list-style: none;
     padding: 4rem 1rem;
+    border-bottom: 1px solid transparent;
+  }
+  .header .menu-item-lg:hover {
+    border-bottom-color: #ffffff;
   }
   .header .menu-item-lg a {
     list-style: none;
@@ -125,9 +129,6 @@ body {
     text-transform: uppercase;
     color: #ffffff;
     padding: 4rem 1rem;
-  }
-  .header .menu-item-lg:hover {
-    border-bottom: 1px solid #ffffff;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -164,6 +165,7 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  gap: 2rem;
   color: #d0d6f9;
   align-items: center;
   /*Navigation Highlight*/
@@ -180,10 +182,11 @@ body {
 }
 .main-destination .nav-label {
   padding: 0.5rem 1rem;
+  border-bottom: 2px solid transparent;
 }
 .main-destination .nav-label:hover {
-  border-bottom: 2px solid rgba(255, 255, 255, 0.0980392157);
-  font-weight: bold;
+  border-bottom-color: rgba(255, 255, 255, 0.0980392157);
+  cursor: pointer;
 }
 .main-destination .figure-destination {
   display: none;
@@ -191,22 +194,22 @@ body {
 .main-destination .planet-info {
   display: none;
 }
-.main-destination #moon:checked ~ .planet-navigation-container > .nav-moon {
+.main-destination #moon:checked ~ .planet-info-section .planet-navigation-container .nav-moon {
   color: #ffffff;
   font-weight: bold;
   border-bottom: 2px solid #ffffff;
 }
-.main-destination #mars:checked ~ .planet-navigation-container > .nav-mars {
+.main-destination #mars:checked ~ .planet-info-section .planet-navigation-container .nav-mars {
   color: #ffffff;
   font-weight: bold;
   border-bottom: 2px solid #ffffff;
 }
-.main-destination #europa:checked ~ .planet-navigation-container > .nav-europa {
+.main-destination #europa:checked ~ .planet-info-section .planet-navigation-container .nav-europa {
   color: #ffffff;
   font-weight: bold;
   border-bottom: 2px solid #ffffff;
 }
-.main-destination #titan:checked ~ .planet-navigation-container > .nav-titans {
+.main-destination #titan:checked ~ .planet-info-section .planet-navigation-container .nav-titan {
   color: #ffffff;
   font-weight: bold;
   border-bottom: 2px solid #ffffff;
@@ -239,7 +242,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 2rem;
   width: 80vw;
 }
 .main-destination .destination-page-header {
@@ -265,8 +267,9 @@ body {
 .main-destination .planet-info-section {
   display: flex;
   flex-direction: column;
+  gap: 2rem;
   width: 80vw;
-  margin-top: 5rem;
+  align-items: center;
 }
 .main-destination .planet-name-header {
   text-align: center;
@@ -288,6 +291,12 @@ body {
   flex-direction: column;
   align-items: center;
 }
+.main-destination .distance-container,
+.main-destination .distance-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .main-destination .subheading-destination {
   font-size: 1.4rem;
   font-family: "Barlow Condensed", sans-serif;
@@ -297,4 +306,91 @@ body {
 .main-destination .subheading-destination-paragraph {
   font-size: 2.8rem;
   color: #ffffff;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 1.8rem;
+  }
+
+  .main-destination {
+    background-image: url(../assets/destination/background-destination-tablet.jpg);
+    gap: 2rem;
+  }
+  .main-destination .planet-section {
+    margin-top: 2rem;
+    width: 90vw;
+  }
+  .main-destination .destination-page-header {
+    align-self: flex-start;
+    margin-top: 12rem;
+  }
+  .main-destination .figure-destination,
+.main-destination .img-destination {
+    width: 35rem;
+    height: 35rem;
+  }
+  .main-destination .nav-label {
+    padding: 0.5rem 2rem;
+  }
+  .main-destination .planet-info-section {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    margin-top: 2rem;
+  }
+  .main-destination .planet-name-header {
+    font-size: 5.6rem;
+  }
+  .main-destination .planet-date-container {
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 2rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .main-destination {
+    background-image: url(../assets/destination/background-destination-desktop.jpg);
+    gap: 2rem;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .main-destination .figure-destination,
+.main-destination .img-destination {
+    width: 50rem;
+    height: 50rem;
+  }
+  .main-destination .planet-info-section {
+    width: 40vw;
+    height: 70vh;
+    margin: 0;
+    padding-top: 17rem;
+    justify-content: flex-start;
+  }
+  .main-destination .planet-section {
+    margin-top: 2rem;
+    width: 40vw;
+    height: 70vh;
+  }
+  .main-destination .destination-page-header {
+    font-size: 2.8rem;
+    margin: 0;
+    margin-bottom: 10rem;
+  }
+  .main-destination .planet-info {
+    width: 30vw;
+  }
+  .main-destination .planet-name-header {
+    font-size: 10rem;
+  }
+  .main-destination .destination-paragraph {
+    text-align: left;
+  }
+  .main-destination .subheading-destination {
+    font-size: 1.4rem;
+  }
+  .main-destination .subheading-destination-paragraph {
+    font-size: 2.8rem;
+  }
 }/*# sourceMappingURL=main.css.map */

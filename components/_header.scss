@@ -111,19 +111,22 @@
       justify-content: space-between;
       padding-bottom: 1px;
     }
+
     .menu-item-lg {
       list-style: none;
       padding: 4rem 1rem;
-    }
-    .menu-item-lg a {
-      list-style: none;
-      text-decoration: none;
-      text-transform: uppercase;
-      color: base.$white;
-      padding: 4rem 1rem;
-    }
-    .menu-item-lg:hover {
-      border-bottom: 1px solid base.$white;
+      border-bottom: 1px solid transparent;
+
+      &:hover {
+        border-bottom-color: base.$white;
+      }
+      a {
+        list-style: none;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: base.$white;
+        padding: 4rem 1rem;
+      }
     }
   }
 }
